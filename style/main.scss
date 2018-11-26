@@ -1,0 +1,474 @@
+// //@import url('https://fonts.googleapis.com/css?family=Kanit:800');
+// @import url('https://fonts.googleapis.com/css?family=Bungee+Shade');
+// @import url('https://fonts.googleapis.com/css?family=Russo+One');
+// :root {
+//     --f-size: 15;
+//     --f-unit: 1vmin;
+//     --f: calc(var(--f-size) * var(--f-unit));
+//     --bg: #00000000;
+// }
+// *,
+// *::after,
+// *::before {
+//     box-sizing: border-box;
+// }
+// .li1 {
+//     font-family: 'Russo One',
+//         sans-serif;
+//     font-size: 30px;
+//     font-weight: 500;
+//     line-height: 1.4;
+//     margin: auto;
+//     color: white;
+//     text-align: center;
+//     transform: scaleX(var(--scale, 1));
+//     animation: glitch-p 21s infinite alternate;
+//     &::before,
+//     &::after {
+//         --top: 0; // offset from top [0 - 10]
+//         --left: 0; // offset from left [0.001 - 1]
+//         --v-height: 30%; // visible part
+//         --n-tenth: calc(var(--f-size) * .1 * var(--top));
+//         --t-cut: calc(var(--n-tenth) / var(--f-size) * 100%);
+//         --b-cut: calc(var(--t-cut) + var(--v-height));
+//         content: attr(data-text);
+//         position: absolute;
+//         width: 100%;
+//         left: 0;
+//         text-align: center;
+//         transform: translateX(calc(var(--left) * 100%));
+//         // this helps to get rid of pixelization
+//         filter: drop-shadow(0 0 transparent);
+//         text-shadow: calc(var(--left) * -3em) 0 .02em blue,
+//             calc(var(--left) * -6em) 0 .02em #ff00e1;
+//         background-color: var(--bg);
+//         clip-path: polygon(0% var(--t-cut), 100% var(--t-cut), 100% var(--b-cut), 0% var(--b-cut));
+//     }
+//     &::before {
+//         animation: glitch-b 2.7s infinite alternate-reverse;
+//     }
+//     &::after {
+//         animation: glitch-a 4.1s infinite alternate;
+//     }
+// }
+// .li2 {
+//     font-family: 'Russo One',
+//         sans-serif;
+//     font-size: 30px;
+//     font-weight: 500;
+//     line-height: 1.4;
+//     margin: auto;
+//     color: white;
+//     text-align: center;
+//     transform: scaleX(var(--scale, 1));
+//     animation: glitch-p 30s infinite alternate;
+//     &::before,
+//     &::after {
+//         --top: 0; // offset from top [0 - 10]
+//         --left: 0; // offset from left [0.001 - 1]
+//         --v-height: 30%; // visible part
+//         --n-tenth: calc(var(--f-size) * .1 * var(--top));
+//         --t-cut: calc(var(--n-tenth) / var(--f-size) * 100%);
+//         --b-cut: calc(var(--t-cut) + var(--v-height));
+//         content: attr(data-text);
+//         position: absolute;
+//         width: 100%;
+//         left: 0;
+//         text-align: center;
+//         transform: translateX(calc(var(--left) * 100%));
+//         // this helps to get rid of pixelization
+//         filter: drop-shadow(0 0 transparent);
+//         text-shadow: calc(var(--left) * -3em) 0 .02em blue,
+//             calc(var(--left) * -6em) 0 .02em #ff00e1;
+//         background-color: var(--bg);
+//         clip-path: polygon(0% var(--t-cut), 100% var(--t-cut), 100% var(--b-cut), 0% var(--b-cut));
+//     }
+//     &::before {
+//         animation: glitch-b 3.7s infinite alternate-reverse;
+//     }
+//     &::after {
+//         animation: glitch-a 5.1s infinite alternate;
+//     }
+// }
+// .li3 {
+//     font-family: 'Russo One',
+//         sans-serif;
+//     font-size: 30px;
+//     font-weight: 500;
+//     line-height: 1.4;
+//     margin: auto;
+//     color: white;
+//     text-align: center;
+//     transform: scaleX(var(--scale, 1));
+//     animation: glitch-p 26s infinite alternate;
+//     &::before,
+//     &::after {
+//         --top: 0; // offset from top [0 - 10]
+//         --left: 0; // offset from left [0.001 - 1]
+//         --v-height: 30%; // visible part
+//         --n-tenth: calc(var(--f-size) * .1 * var(--top));
+//         --t-cut: calc(var(--n-tenth) / var(--f-size) * 100%);
+//         --b-cut: calc(var(--t-cut) + var(--v-height));
+//         content: attr(data-text);
+//         position: absolute;
+//         width: 100%;
+//         left: 0;
+//         text-align: center;
+//         transform: translateX(calc(var(--left) * 100%));
+//         // this helps to get rid of pixelization
+//         filter: drop-shadow(0 0 transparent);
+//         text-shadow: calc(var(--left) * -3em) 0 .02em blue,
+//             calc(var(--left) * -6em) 0 .02em #ff00e1;
+//         background-color: var(--bg);
+//         clip-path: polygon(0% var(--t-cut), 100% var(--t-cut), 100% var(--b-cut), 0% var(--b-cut));
+//     }
+//     &::before {
+//         animation: glitch-b 4.7s infinite alternate-reverse;
+//     }
+//     &::after {
+//         animation: glitch-a 6.1s infinite alternate;
+//     }
+// }
+// @keyframes glitch-p {
+//     17% {
+//         --scale: .87;
+//     }
+//     31% {
+//         --scale: 1.1;
+//     }
+//     37% {
+//         --scale: 1.3;
+//     }
+//     47% {
+//         --scale: .91;
+//     }
+//     87% {
+//         --scale: 1;
+//     }
+// }
+// @keyframes glitch-a {
+//     10%,
+//     30%,
+//     50%,
+//     70%,
+//     90% {
+//         --top: 0;
+//         --left: 0;
+//     }
+//     0% {
+//         --v-height: 15%;
+//     }
+//     20% {
+//         --left: .005;
+//     }
+//     40% {
+//         --left: .01;
+//         --v-height: 20%;
+//         --top: 3;
+//     }
+//     60% {
+//         --left: .03;
+//         --v-height: 25%;
+//         --top: 6;
+//     }
+//     80% {
+//         --left: .07;
+//         --v-height: 5%;
+//         --top: 8;
+//     }
+//     100% {
+//         --left: .083;
+//         --v-height: 30%;
+//         --top: 1;
+//     }
+// }
+// @keyframes glitch-b {
+//     10%,
+//     30%,
+//     50%,
+//     70%,
+//     90% {
+//         --top: 0;
+//         --left: 0;
+//     }
+//     0% {
+//         --v-height: 15%;
+//         --top: 10;
+//     }
+//     20% {
+//         --left: -.005;
+//     }
+//     40% {
+//         --left: -.01;
+//         --v-height: 17%;
+//         --top: 3;
+//     }
+//     60% {
+//         --left: -.03;
+//         --v-height: 35%;
+//         --top: 6;
+//     }
+//     80% {
+//         --left: -.07;
+//         --v-height: 5%;
+//         --top: 8;
+//     }
+//     100% {
+//         --left: -.083;
+//         --v-height: 30%;
+//         --top: 1;
+//     }
+// }
+body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden !important;
+}
+
+#firstImg {
+    width: calc(105vw + 30px);
+    height: 95vh;
+    background-image: url("images/smoke3.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: -30px 0 0 -30px;
+    overflow: hidden;
+}
+
+#secImg {
+    width: calc(105vw + 30px);
+    height: 100%;
+    background-image: url("images/smoke4.png"), url("images/smoke4.png");
+    background-size: 66vh, 66vh;
+    background-position: 10px 10px, 0px 0px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.home {
+    background-color: #663399;
+    padding: 5px 3px;
+    width: 30px;
+    height: 25px;
+    position: absolute;
+    left: 35px;
+    top: 35px;
+    z-index: 100;
+    transition: all 0;
+}
+
+.home-line {
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    left: 38px;
+    top: 53px;
+    z-index: 100;
+    box-shadow: 1px 2px 3px #00000020;
+}
+
+.nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 102vw;
+    height: 102vh;
+}
+
+.hamburger {
+    top: 16px;
+    right: 0;
+    width: 35px;
+    height: 4px;
+    background: #fcfcfc;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 1px 2px 3px #00000020;
+}
+
+.hamburger:before {
+    top: -11px;
+    box-shadow: 1px 2px 3px #00000020;
+}
+
+.hamburger:after {
+    top: 11px;
+    box-shadow: 1px 2px 3px #00000020;
+}
+
+.hamburger-icon {
+    position: absolute;
+    top: 35px;
+    right: 40px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.hamburger-one:before,
+.hamburger-one:after {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 4px;
+    background: #fcfcfc;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 1px 2px 3px #00000020;
+}
+
+.hamburger-icon.active-one .hamburger-one {
+    background: rgba(0, 0, 0, 0);
+    box-shadow: 1px 2px 3px #00000020;
+}
+
+.hamburger-icon.active-one .hamburger-one:before {
+    top: 0;
+    transform: rotate(45deg);
+    box-shadow: 1px 2px 3px #00000020;
+}
+
+.hamburger-icon.active-one .hamburger-one:after {
+    top: 0;
+    transform: rotate(135deg);
+    box-shadow: 1px 2px 3px #00000020;
+}
+
+.navlist {
+    opacity: 0;
+    position: absolute;
+    top: 50px;
+    right: 55px;
+    width: 450vw;
+    height: 300vh;
+    margin-right: -225vw;
+    margin-top: -150vh;
+    transform: scale(0);
+    background-color: #663399;
+    border-radius: 100%;
+    transition: all 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    z-index: 99;
+}
+
+.nav {
+    ul {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        opacity: 0;
+        z-index: 100;
+    }
+
+    li {
+        // padding: 0;
+        // margin: 0;
+        font-family: "Russo One", sans-serif;
+        text-shadow: 2px 2px 2px #00000015; // font-size: 30px;
+        // font-weight: 500;
+        // line-height: 1.4;
+        // color: white;
+    }
+}
+
+.animate-reveal {
+    padding: 0;
+    margin: 0;
+    font-family: "Russo One", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0;
+    -webkit-animation: reveal 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+    -moz-animation: reveal 1s ease-in 1 normal forwards;
+    -o-animation: reveal 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+    animation: reveal 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+}
+
+.animate-hide {
+    animation: hide 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+    padding: 0;
+    margin: 0;
+    font-family: "Russo One", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.animate-first {
+    animation-delay: 300ms;
+}
+
+.animate-second {
+    animation-delay: 600ms;
+}
+
+.animate-third {
+    animation-delay: 900ms;
+}
+
+.animate-hide-control {
+    animation-delay: 0;
+}
+
+@keyframes reveal {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes hide {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+}
+
+.welcome-message {
+    color: white;
+    font-family: "Russo One", sans-serif;
+    position: absolute;
+    width: 85vw;
+    top: calc(40% + 3em);
+    left: 45px;
+    font-size: 2.2em;
+    z-index: 1;
+    text-shadow: 2px 2px 2px #00000020;
+}
+
+.main {
+    position: absolute;
+    padding: 0 20px;
+    width: 90vw;
+
+    h3 {
+        margin: 15px 0 10px 0;
+    }
+
+    p {
+        margin: 10px 0;
+    }
+}
